@@ -1,0 +1,183 @@
+/* ========================== */
+/* ====== MOBILE FIRST ====== */
+/* ========================== */
+body {
+    background-color: #2f3848;
+}
+
+.wrapper {
+    padding: 0 15px;
+}
+
+/* HEADER */
+.header-title {
+    text-align: center;
+    color: white;
+    background-color: #f05768;
+    border-bottom: 2px solid white;
+    padding: 0.2em 0;
+    border-radius: 0 0 6px 6px;
+}
+
+nav.header-links__menu.menu {
+    text-align: center;
+}
+
+ul.menu__list,
+ul.socials__list {
+    padding-left: 0;
+    text-align: center;
+}
+
+li.menu__item,
+li.socials__item {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+a.menu__link {
+    color: yellowgreen;
+    font-weight: bold;
+}
+
+img.socials__picture {
+    height: 25px;
+}
+
+/* MAIN */
+/* Intro */
+h2.intro__title {
+    color: #00ccff;
+}
+
+p.intro__text {
+    color: white;
+    font-weight: bold;
+}
+
+a.intro__link {
+    color: yellowgreen;
+    text-decoration: underline;
+}
+
+/* Cam Of The Week */
+section.cam-of-the-week {
+    position: relative;
+}
+
+h2.cam-of-the-week__title {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: #f05768;
+    padding: 0.2em;
+    text-transform: uppercase;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+img.gallery__picture {
+    margin-top: 1em;
+}
+
+/* Submit */
+.submit {
+    display: none;
+    padding: 1em;
+    background-color: #004488;
+}
+
+h3.submit__title {
+    color: #00ccff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-bottom: 2px solid #00ccff;
+    padding-bottom: 0.7em;
+    margin-bottom: 0.7em;
+}
+
+p.submit__text {
+    color: yellowgreen;
+    font-weight: bold;
+}
+
+a.submit__link {
+    color: yellowgreen;
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    padding: 3em 0 1.5em;
+    text-align: center;
+    color: #00ccff;
+}
+
+/* ========================== */
+/* ======== TABLETTE ======== */
+/* ========================== */
+@media screen and (min-width: 768px) {
+    .header-links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    img.gallery__picture {
+        width: 30%;
+    }
+
+    .submit {
+        display: block;
+        margin-top: 1em;
+    }
+}
+
+/* ========================== */
+/* ======== DESKTOP ========= */
+/* ========================== */
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .gallery-submit {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .gallery {
+        display: block;
+        width: 70%;
+        margin-top: 1rem;
+        margin-right: 50px;
+        /* Petit hack qui permet d'enlever le petit espace entre les images */
+        font-size: 0;
+    }
+
+    img.gallery__picture {
+        width: calc(25% - 5px);
+        margin: 0 5px 5px 0;
+    }
+
+    img.gallery__picture:first-child {
+        width: calc(50% - 5px);
+        float: left;
+    }
+
+    /* Cibler l'iguane */
+    img.gallery__picture:nth-child(15) {
+        border: 1px solid red;
+    }
+
+    .submit {
+        width: 30%;
+    }
+}
